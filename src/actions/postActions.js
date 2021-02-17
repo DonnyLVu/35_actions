@@ -1,11 +1,11 @@
-export const CREATE_BLOG = 'CREATE_BLOG';
-export const createBlog = blog => ({
-  type: CREATE_BLOG,
-  payload: blog
+export const CREATE_POST = 'CREATE_POST';
+export const createPost = post => ({
+  type: CREATE_POST,
+  payload: post
 });
 
-export const DELETE_BLOG = 'DELETE_BLOG';
-export const deleteBlog = (content) => ({
-  type: DELETE_BLOG,
+export const DELETE_POST = 'DELETE_POST';
+export const deletePost = (content) => ({
+  type: DELETE_POST,
   payload: content
 });
