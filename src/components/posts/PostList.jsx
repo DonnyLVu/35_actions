@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from '../../state/BlogProvider';
+import { useSelector } from '../../state/BlogsProvider';
 import { getPosts } from '../../selectors/BlogSelector';
 import { Post } from './Post';
 

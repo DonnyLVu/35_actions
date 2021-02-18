@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './components/app/App';
-import { BlogProvider } from './state/BlogProvider';
+import { BlogsProvider } from './state/BlogsProvider';
 
 render(
-  <BlogProvider>
+  <BlogsProvider>
     <App />
-  </BlogProvider>,
+  </BlogsProvider>,
   document.getElementById('root')
 );

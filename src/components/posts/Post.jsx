@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from '../../state/BlogProvider';
+import { useDispatch } from '../../state/BlogsProvider';
 import { deletePost } from '../../actions/postActions';
 
 export const Post = ({ title, content }) => {

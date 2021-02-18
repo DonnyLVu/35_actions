@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createPost } from '../../actions/postActions';
-import { useDispatch } from '../../state/BlogProvider';
+import { useDispatch } from '../../state/BlogsProvider';
 
 const Form = () => {
   const dispatch = useDispatch();
