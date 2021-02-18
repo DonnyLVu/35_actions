@@ -9,12 +9,12 @@ export default function reducer(state, action) {
     case CREATE_POST:
       return {
         ...state,
-        posts: [...state, action.payload]
+        posts: [...state.posts, action.payload]
       };
     case DELETE_POST:
       return {
         ...state,
-        posts: state.posts.filter(post => post.content !== action.payload)
+        posts: state.posts.filter(post => post.title !== action.payload)
       };
     default:
       return state;
