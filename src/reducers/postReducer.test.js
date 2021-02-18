@@ -1,4 +1,4 @@
-import reducer from './postReducer';
+import postReducer from './postReducer';
 import { createPost, deletePost } from '../actions/postActions';
 
 describe('blog reducer', () => {
@@ -12,7 +12,7 @@ describe('blog reducer', () => {
       context: 'Context 1'
     });
 
-    const newState = reducer(state, action);
+    const newState = postReducer(state, action);
     expect(newState).toEqual({
       posts: [{ title: 'Title 1', context: 'Context 1' }]
     });
@@ -24,7 +24,7 @@ describe('blog reducer', () => {
     };
 
     const action = deletePost('Title 1');
-    expect(reducer(state, action)).toEqual({
+    expect(postReducer(state, action)).toEqual({
       posts: []
     });
   });
