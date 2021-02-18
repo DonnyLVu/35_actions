@@ -1,4 +1,3 @@
-
 import { countPosts, getPosts } from './BlogSelector.js';
 
 describe('blog selectors', () => {
