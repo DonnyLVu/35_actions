@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { getComments } from '../../selectors/commentSelector';
+import { getComments } from '../../selectors/CommentSelector';
 import { Comment } from './Comment';
 
 const CommentList = () => {

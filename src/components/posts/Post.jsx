@@ -16,7 +16,7 @@ export const Post = ({ title, content, index }) => {
   return (
     <>
       <dl>
-        <dt>title</dt>
+        <dt>POST TITLE</dt>
         <dd>{title}</dd>
 
         <dt>Content</dt>
@@ -32,5 +32,5 @@ export const Post = ({ title, content, index }) => {
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  index: PropTypes.string.isRequired
+  index: PropTypes.number.isRequired
 };

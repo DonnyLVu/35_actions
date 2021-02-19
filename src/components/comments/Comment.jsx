@@ -14,7 +14,7 @@ export const Comment = ({ commentTitle, commentContent }) => {
   return (
     <>
       <dl>
-        <dt>title</dt>
+        <dt>COMMENT TITLE</dt>
         <dd>{commentTitle}</dd>
 
         <dt>Content</dt>

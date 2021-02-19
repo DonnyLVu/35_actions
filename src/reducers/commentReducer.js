@@ -4,7 +4,7 @@ export const initialState = {
   comments: []
 };
 
-export default function postReducer(state = initialState, action) {
+export default function commentReducer(state = initialState, action) {
   switch (action.type) {
     case CREATE_COMMENT:
       return {
@@ -15,7 +15,7 @@ export default function postReducer(state = initialState, action) {
       return {
         ...state,
         // eslint-disable-next-line max-len
-        posts: state.comments.filter(comment => comment.title !== action.payload)
+        posts: state.comments.filter(comment => [comment.title !== action.payload])
       };
     default:
       return state;
