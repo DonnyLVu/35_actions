@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './components/app/App';
-import { BlogsProvider } from './state/BlogsProvider';
+import { Provider } from 'react-redux';
+import store from './store';
 
 render(
-  <BlogsProvider>
+  <Provider store={store}>
     <App />
-  </BlogsProvider>,
+  </Provider>,
   document.getElementById('root')
 );

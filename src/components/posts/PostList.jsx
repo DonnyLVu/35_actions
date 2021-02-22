@@ -1,14 +1,14 @@
 import React from 'react';
-import { useSelector } from '../../state/BlogsProvider';
+import { useSelector } from 'react-redux';
 import { getPosts } from '../../selectors/BlogSelector';
 import { Post } from './Post';
 
 const PostList = () => {
   const posts = useSelector(getPosts);
 
-  const postElements = posts.map(post => (
+  const postElements = posts.map((post, index) => (
     <li key={post.title}>
-      <Post {...post} />
+      <Post index={index}{...post} />
     </li>
   ));
 
