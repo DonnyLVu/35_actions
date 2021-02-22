@@ -7,7 +7,7 @@ const PostList = () => {
   const posts = useSelector(getPosts);
 
   const postElements = posts.map((post, index) => (
-    <li key={index}>
+    <li key={post.title}>
       <Post index={index}{...post} />
     </li>
   ));

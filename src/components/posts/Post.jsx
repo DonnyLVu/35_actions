@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deletePost } from '../../actions/postActions';
+import { deleteComments } from '../../actions/commentActions';
 import CommentForm from '../form/CommentForm';
 import CommentList from '../comments/CommentList';
 
@@ -10,6 +11,7 @@ export const Post = ({ title, content, index }) => {
 
   const handleClick = () => {
     dispatch(deletePost(title));
+    dispatch(deleteComments(index));
     console.log('post deleted');
   };
 
@@ -24,7 +26,7 @@ export const Post = ({ title, content, index }) => {
       </dl>
       <button onClick={handleClick}>Delete</button>
       <CommentForm index={index} />
-      <CommentList />
+      <CommentList index={index} />
     </>
   );
 };

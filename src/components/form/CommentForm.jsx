@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createComment } from '../../actions/commentActions';
 import { useDispatch } from 'react-redux';
 
-const CommentForm = (index = { index }) => {
+const CommentForm = ({ index }) => {
   const dispatch = useDispatch();
 
   const [commentTitle, setTitle] = useState('');

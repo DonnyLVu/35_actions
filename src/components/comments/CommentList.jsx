@@ -3,10 +3,11 @@ import { useSelector } from 'react-redux';
 import { getComments } from '../../selectors/CommentSelector';
 import { Comment } from './Comment';
 
-const CommentList = () => {
-  const comments = useSelector(getComments);
+const CommentList = ({ index }) => {
+  const comments = useSelector(getComments) || [];
 
-  const commentElements = comments.map(comment => (
+  // eslint-disable-next-line max-len
+  const commentElements = comments.filter(comment => comment.index === index).map(comment => (
     <li key={comment.commentTitle}>
       <Comment {...comment} />
     </li>
